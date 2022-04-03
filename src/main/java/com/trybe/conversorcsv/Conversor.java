@@ -49,7 +49,7 @@ public class Conversor {
         String regex = ",(?=([^\"]*\"[^\"]*\")*(?![^\"]*\"))";
         Pattern p = Pattern.compile(regex);
 
-        while(conteudoLinha != null) {
+        while (conteudoLinha != null) {
           String[] split = p.split(conteudoLinha);
           lista.add(split);
           conteudoLinha = buffedFile.readLine();
@@ -77,8 +77,7 @@ public class Conversor {
             String linha = nome + "," + data + "," + email + "," + cpf;
             bufferedWriter.write(linha);
             bufferedWriter.newLine();
-          }
-          else {
+          } else {
             for (String item: split) {
               if (item == split[3]) {
                 bufferedWriter.write(item);
